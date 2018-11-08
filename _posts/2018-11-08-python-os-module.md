@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Create and run a requirements.txt for pip install
-subtitle: Example of requirements.txt
+title: Making a new directory
+subtitle: 디렉토리 생성
 gh-repo: neep305/neep305.github.io
 gh-badge: [star, fork, follow]
-tags: [python,install,package-management]
+tags: [python,mkdir]
 ---
 
 ### 디렉토리 생성
