@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Making a new directory
-subtitle: 디렉토리 생성
+title: [Python] How to use lambda
+subtitle: 람다 function 사용하기
 gh-repo: neep305/neep305.github.io
 gh-badge: [star, fork, follow]
 tags: [python,lambda,anonymous function]
@@ -32,6 +32,5 @@ def getSome(a):
 getAny = getSome(5)
 
 print(getAny(11)
-
-# 결과값 = 55
 ```
+> 결과값 : 55
