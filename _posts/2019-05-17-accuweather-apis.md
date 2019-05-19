@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accuweater API 정리
+title: Accuweather API 정리
 subtitle: API별 기능
 gh-repo: neep305/neep305.github.io
 gh-badge: [star, fork, follow]
@@ -8,6 +8,11 @@ tags: [weather,forecast,data_integration,python,nodejs]
 ---
 
 ## 서비스 화면별 기능
+### 온도 그래프
+- 평균최고, 평균최저
+- 고온(현재),저온(현재)
+- 고온(예상),저온(예상)
+
 ### 월간 예보
 - 기온
 - 기후 : 맑음, 구름, 비
@@ -16,8 +21,6 @@ tags: [weather,forecast,data_integration,python,nodejs]
 - 현재 공기질 지수
 - 최근 4시간 공기질 변화 
 - PM10,PM2.5,CO,NO2,SO2
-
-### 기상예보
 
 ### 건강지표
 - 식중독지수
