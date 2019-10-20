@@ -30,12 +30,15 @@ assert 'Django' in browser.title
 #### unittest 모듈을 이용한 기능 테스트 확장
 ```python
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import unittest
 
 class NavigationTest(unittest.TestCase):
   
   def setUp(self):
     self.browser = webdriver.Firefox()
+    # 브라우저 실행 후 3초를 기다리도록 명령. 렌더링 속도 혹은 사이트에 따라 3초를 맞춰 어떤 동작을 실행할 경우 정확히 의도한 동작을 실행하기 어려울 수 있음.
+    self.browser.implicitly_wait(3)
 
   def tearDown(self):
     self.browser.quit()
@@ -46,6 +49,20 @@ class NavigationTest(unittest.TestCase):
 
     # 웹 페이지 타이틀 확인
     self.assertIn('To-Do', self.browser.title)
+    header_text = self.browser.find_element_by_tag_name('h1').text
+    self.assertIn('To-Do', header_text)
+
+    inputbox = self.browser.find_element_by_id('id_new_item')
+    self.assertEqual(inputbox.get_attribute('placeholder'), 'add new item')
+
+    inputbox.send_keys('Buy shoes')
+    inputbox.send_keys(Keys.ENTER)
+
+    table = self.browser.find_element_by_id('id_list_table')
+    rows = table.find_elements_by_tag_name('tr')
+    self.assertTrue(any(row.text == '1: Buy shoes' for row in rows),)
+
+    self.fail('Finish the test!!')
 
   if __name__ == '__main__':
     unittest.main(warnings='ignore')
