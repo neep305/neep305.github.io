@@ -71,4 +71,3 @@ class NavigationTest(unittest.TestCase):
 ```shell
 $ python functional_test.py
 ```
-
