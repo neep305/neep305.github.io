@@ -28,6 +28,7 @@ twice(add3, 7); // 13
 ```
 
 > python example 1
+
 ```python
 def twice(f):
     def result(a):
@@ -43,6 +44,7 @@ g(7)
 ```
 
 > python example 2 from 'Real Python'
+
 ```python
 high_ord_func = lambda x, func: x + func(x)
 high_ord_func(2, lambda x: x * x) # result: 6
