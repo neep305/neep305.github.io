@@ -18,7 +18,8 @@ All other functions are first-order functions. In mathematics higher-order funct
 ```
 
 #### Sample 
-> javascript
+> javascript example
+
 ```javascript
 const twice = (f, v) => f(f(v));
 const add3 = v => v + 3;
