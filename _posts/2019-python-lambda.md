@@ -34,3 +34,21 @@ getAny = getSome(5)
 print(getAny(11)
 ```
 > 결과값 : 55
+
+### Syntax
+> No Statements
+A lambda function can’t contain any statements.
+```python
+>>> (lambda x: assert x == 2)(2)
+  File "<input>", line 1
+    (lambda x: assert x == 2)(2)
+                    ^
+SyntaxError: invalid syntax
+```
+
+> Single Expression
+```python
+>>> (lambda x:
+... (x % 2 and 'odd' or 'even'))(3)
+'odd'
+```
