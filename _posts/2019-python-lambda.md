@@ -35,4 +35,35 @@ print(getAny(11)
 ```
 > 결과값 : 55
 
-#### Syntax
+### Syntax
+> No Statements
+A lambda function can’t contain any statements.
+```python
+>>> (lambda x: assert x == 2)(2)
+  File "<input>", line 1
+    (lambda x: assert x == 2)(2)
+                    ^
+SyntaxError: invalid syntax
+```
+
+> Single Expression
+```python
+>>> (lambda x:
+... (x % 2 and 'odd' or 'even'))(3)
+'odd'
+```
+
+#### Type Annotation
+- 함수 형태로 정의
+```python
+def full_name(first: str, last: str) -> str:
+    return f'{first.title()} {last.title()}'
+```
+- lambda 형식
+```python
+>>> lambda first: str, last: str: first.title() + " " + last.title() -> str
+  File "<stdin>", line 1
+    lambda first: str, last: str: first.title() + " " + last.title() -> str
+
+SyntaxError: invalid syntax
+```
