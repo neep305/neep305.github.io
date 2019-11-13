@@ -52,27 +52,3 @@ SyntaxError: invalid syntax
 ... (x % 2 and 'odd' or 'even'))(3)
 'odd'
 ```
-
-#### Type Annotation
-> 함수에서 사용하는 Type hint를 Lambda에서는 사용할 수 없다.
-
-```python
-# function
-def full_name(first: str, last: str) -> str:
-    return f'{first.title()} {last.title()}'
-```
-```python
-# lambda function
->>> lambda first: str, last: str: first.title() + " " + last.title() -> str
-  File "<stdin>", line 1
-    lambda first: str, last: str: first.title() + " " + last.title() -> str
-
-SyntaxError: invalid syntax
-```
-
-#### IIFE(Immediately Invoked Function Execution)
-- Lambda에 값을 대입하여 바로 함수를 실행하도록 할 수 있다.
-```python
-result = (lambda x: x * x)(4)
-print(result) # result = 16
-```
