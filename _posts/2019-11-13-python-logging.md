@@ -11,7 +11,9 @@ tags: [python,logging]
 
 #### 기본 로깅 
 > level 및 output 파일경로를 설정한다.
+
 ```python
+
 import logging
 
 def main():
@@ -30,6 +32,7 @@ if __name__ == "__main__":
 ```
 
 #### 커스텀 로깅
+
 |함수|설명|
 |-|-|
 |%(asctime)s| Human readable date format when the log record was created|
@@ -44,6 +47,7 @@ if __name__ == "__main__":
 
 
 ```python
+
 import logging
 
 extData = {
