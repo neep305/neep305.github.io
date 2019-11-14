@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Python] logging module 사용하기
+title: Python logging module 사용하기
 subtitle: Basic and custom logging
 gh-repo: neep305/neep305.github.io
 gh-badge: [star, fork, follow]

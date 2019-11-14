@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Python] How to use lambda
+title: How to use lambda in Python
 subtitle: 람다 function 사용하기
 gh-repo: neep305/neep305.github.io
 gh-badge: [star, fork, follow]
