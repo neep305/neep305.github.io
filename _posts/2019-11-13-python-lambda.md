@@ -76,3 +76,19 @@ SyntaxError: invalid syntax
 result = (lambda x: x * x)(4)
 print(result) # result = 16
 ```
+
+#### Arguments
+
+```python
+(lambda x, y, z: x + y + z)(1, 2, 3) # result = 6
+
+(lambda x, y, z=3: x + y + z)(1, 2) # result = 6
+
+(lambda x, y, z=3: x + y + z)(1, y=2) # result = 6
+
+(lambda *args: sum(args))(1,2,3) # result = 6
+
+(lambda **kwargs: sum(kwargs.values()))(one=1, two=2, three=3) # result = 6
+
+(lambda x, *, y=0, z=0: x + y + z)(1, y=2, z=3) # result = 6
+```
