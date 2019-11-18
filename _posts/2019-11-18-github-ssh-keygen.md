@@ -10,7 +10,6 @@ tags: [github,ssh,ssh-keygen,ssh-agent]
 ### SSH 키 새로 생성하기
 
 - 아래 명령어를 입력하고 메일주소에 Github 계정에서 쓰는 메일주소를 입력한다.
-
 ```shell
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
@@ -35,7 +34,6 @@ Host *
 ```
 
 3. private key를 ssh-agent에 추가하고, passpharase를 키체인에 저장한다.
-
 ```shell
 $ ssh-add -K ~/.ssh/id_rsa
 ```
