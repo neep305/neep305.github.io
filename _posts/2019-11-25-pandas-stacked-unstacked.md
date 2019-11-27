@@ -35,4 +35,6 @@ def stacked():
 if __name__ == '__main__':
     data_stack = stacked().stack()
     print(data_stack)
+
+    print(data_stack.index)
 ```
