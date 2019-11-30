@@ -26,3 +26,14 @@ Animal
 Falcon      375.0
 Parrot       25.0
 ```
+
+> Groupby 조건 설정
+- by: 그룹핑할 특정 컬럼 지정
+- axis: 0은 열(column) 단위, 1은 행(index) 단위
+- as_index: 별도의 인덱스로 만들지 말지
+
+```python
+sub_data_grp = sub_data_demo.groupby(by = ['country','device'], axis=0, as_index=False)
+
+sub_data_grp
+```
