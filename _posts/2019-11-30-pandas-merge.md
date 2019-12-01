@@ -1,52 +1,33 @@
 ---
 layout: post
-title: Calculating lift & significance testing
-subtitle: AB Test 결과 분석
+title: Pandas merging on different sets of fields
+subtitle: 두 데이터셋 머지하기
 gh-repo: neep305/neep305.github.io
 gh-badge: [star, fork, follow]
-tags: [python,pandas,abtest,lift,significance]
+tags: [python,pandas,merge,mergeon,innerjoin]
 ---
 
 # Formula
-**Calculating lift**
-
-$$
-Calculating\_lift = \frac{Treadment\_conversion\_rate - Control\_conversion\_rate}{Control\_conversion\_rate} 
-$$
-
-# Code
-
-```python
-# Calculate the mean of a and b
-a_mean = np.mean(control)
-b_mean = np.mean(personalization)
-
-# Calculating the lift using a_mean and b_mean
-lift = (b_mean-a_mean) / a_mean
-
-print("lift: ", str(round(lift*100,2)) + '%')
 ```
+# Import pandas 
+import pandas as pd
 
-# T-분포(distribution), T-검정(T-test) & P-value
-## [T-distribution](http://godrag77.blogspot.com/2011/07/t-students-t-distribution.html)이란?
+# Load the customer_data
+customer_data = pd.read_csv('customer_data.csv')
 
-> 모평균과 모표준편차를 모르는 정규모집단에서 표본크기가 작은 경우에 모평균에 대한 추정과 검정을 할 경우 t 통계량을 이용하는데 정규모집단으로 부터 크기 n인 표본을 무작위로 추출했을 때 표본통계량 t는 자유도 (n-1)인 t 분포를 따른다.
+# Load the app_purchases
+app_purchases = pd.read_csv('inapp_purchases.csv')
 
+# Print the columns of customer data
+print(customer_data.columns)
 
-## 자유도
-> 자유도 : 표본분포(sampling distribution)를 구성하기 위해 자유롭게 반복해서 추출할 수 있는 표본(repeated random
+# Print the columns of app_purchases
+print(app_purchases.columns)
 
-## T-test
-> Code
+# Merge on the 'uid' field
+uid_combined_data = app_purchases.merge(customer_data, on=['uid'], how='inner')
 
-```python
-from scipy.stats import ttest_ind
-
-t = ttest_ind(control, personalized)
-
-print(t)
+# Examine the results 
+print(uid_combined_data.head())
+print(len(uid_combined_data))
 ```
-
-## P-value
-- T-statistic of 1.96 is typically statistically significant at the 95% level
-- Depending on the context of the test, you may be comfortable with a lower or higher level of statistical significance
