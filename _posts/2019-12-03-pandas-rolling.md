@@ -21,9 +21,11 @@ moving_avg_20 = data.rolling(20).mean()
 - 별도의 선형가중 이동평균 구하는 방법은 없음
 
 ## 지수 이동평균(Exponential Moving Average) 구하기
-- ewm 활용
+- ewm 활용: 이동평균 프레임수는 span 변수에 할당한다.
 
 ```python
 e_mov_avg_5 = data.ewm(span=5).mean()
 e_mov_avg_10 = data.ewm(span=10).mean()
 ```
+
+## 이동평균 비교
