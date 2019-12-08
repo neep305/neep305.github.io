@@ -10,6 +10,8 @@ tags: [python,pandas,rolling,movingaverage]
 # 이동평균
 - python document link: [이동평균](https://www.openaitrading.com/python-pandas-%EC%9D%B4%EB%8F%99%ED%8F%89%EA%B7%A0-%EA%B5%AC%ED%95%98%EA%B8%B0/)
 
+- related post: [What is a moving average?](https://www.investopedia.com/terms/m/movingaverage.asp)
+
 ## 단순이동평균 구하기
 ```python
 moving_avg_10 = data.rolling(10).mean()
