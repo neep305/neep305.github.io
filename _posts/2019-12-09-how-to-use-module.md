@@ -32,3 +32,18 @@ var users = require('./users');
 console.log(users.getKey());
 console.log(users.user);
 ```
+
+## module.export 사용하여 객체 그대로 할당하기
+
+> test.js
+
+```javascript
+var users = {
+    getUser: function(){
+        return {id:'tester',name:'Jason'}
+    },
+    group: {id: 'test-group', name: 'DevOps'}
+}
+
+module.exports = users;
+```
