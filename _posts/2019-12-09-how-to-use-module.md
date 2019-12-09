@@ -10,6 +10,7 @@ tags: [node.js,module,exports]
 # 모듈
 
 > users.js
+
 ```javascript
 var CLIENT_KEY = process.env.CLIENT_KEY
 
@@ -24,9 +25,10 @@ exports.user = {
 ```
 
 > index.js
+
 ```javascript
 var users = require('./users');
 
 console.log(users.getKey());
-consoloe.log(users.user);
+console.log(users.user);
 ```
