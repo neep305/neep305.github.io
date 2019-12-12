@@ -13,7 +13,7 @@ tags: [python,flask,swagger]
 ## Getting started
 
 > server.py
-\ 
+
 ```python
 from flask import (
     Flask,
