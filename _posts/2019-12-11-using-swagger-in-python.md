@@ -8,7 +8,7 @@ tags: [python,flask,swagger]
 ---
 
 # Python REST APIs With Flask, Connexion, and SQLAlchemy
-- 해당 내용은 [Real Python](https://realpython.com/flask-connexion-rest-api/#demonstration-single-page-application) 컨텐츠 리뷰 및 테스트한 내용을 정리한 것입닏
+- 해당 내용은 [Real Python](https://realpython.com/flask-connexion-rest-api/#demonstration-single-page-application) 컨텐츠 리뷰 및 테스트한 내용을 정리한 것입니다.
 
 ## Getting started
 
