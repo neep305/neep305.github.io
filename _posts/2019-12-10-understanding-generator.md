@@ -47,3 +47,32 @@ print(next(result_get)) # 결과값 0
 
 print(list(result_get)) # 결과값 [1,4,9]
 ```
+
+> another sample
+
+```python
+#python 3 version source
+#yield test source
+#yield_Routine_Test.py
+ 
+def generator_test(n):
+    print("-=-=-=-=-=-= Generator Start =-=-=-=-=-=-")
+     
+    while(n <3):
+        print("<< Before Yield >>")
+        yield n
+        n+= 1
+        print("<< After Yield >>")
+         
+    print("-=-=-=-=-=-= Generator End =-=-=-=-=-=-")
+     
+if __name__== "__main__":
+    print("---------- Main Function Start ----------")
+     
+    for iin generator_test(0):
+        print("Start For))))))))))))")
+        print("Yield i is : ", i)
+        print("End For))))))))))))))")
+         
+    print("---------- Main Function End ----------")
+```
