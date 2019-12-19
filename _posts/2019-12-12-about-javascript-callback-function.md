@@ -63,6 +63,8 @@ function createQuote(quote, functionToCall) {
 <br>그러나 종종 우리가 외부 API와 같은 다른 소스에 데이터를 요청할 때, 우리가 데이터를 언제 받을 수 있는지 타이밍을 정확히 알 수 없습니다. 예를 들어 API 요청 후 응답이 오는 것을 기다려야 하지만, 이로 인해 데이터를 가져올 때까지(fetch) **어플리케이션 전체가 멈춘 상태(grind to a halt)** 로 있으면 안됩니다. 
 <br>따라서 이러한 경우에 Callback function을 쓰면 유용합니다.
 
+### 예제1
+
 ```javascript
 // Result in console after 5 second delay:
 // Response from the server: The glass is half full!
@@ -78,4 +80,17 @@ function getResults(results){
 }
 
 serverRequest("The glass is half ", getResults);
+```
+
+### 예제2
+```javascript
+function getResult(param, callback) {
+  callback({result:"ok", data:{msg: "login success", token:"1234"}})
+}
+
+getResult(null, function(param){
+  console.log(param);
+});
+
+// 출력 결과값: {result:"ok", data:{msg: "login success", token:"1234"}}
 ```
