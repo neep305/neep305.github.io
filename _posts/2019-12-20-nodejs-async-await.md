@@ -17,7 +17,7 @@ function myAsyncFunction(){
 }
 ```
 
-## Async
+## Async/Await
 async function myAsyncFunction(){
   let result;
     
