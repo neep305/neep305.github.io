@@ -18,6 +18,8 @@ function myAsyncFunction(){
 ```
 
 ## Async/Await
+
+```javascript
 async function myAsyncFunction(){
   let result;
     
@@ -29,3 +31,4 @@ async function myAsyncFunction(){
 
   return doSomething(result);
 }
+```
